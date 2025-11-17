@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'montserrat';
     src: url('assets/fonts_global/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -18,37 +19,152 @@
 }
 
 body {
-  background: radial-gradient(circle at 60% 40%, #0d022d, #000);
-  background-repeat: no-repeat;
-  color: #fff;
-  margin: 0;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    background: radial-gradient(circle at center, #1a103c 0%, #030014 100%);
+    overflow-x: hidden;
+    font-family: "montserrat", sans-serif;
 }
 
-
-
-.stars {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  animation: spaceMove 100s linear infinite;
-  z-index: -1;
+.container {
+    padding: 0 10%;
 }
 
-@keyframes spaceMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-500px, -1000px); }
+/* --- HEADER & MENU --- */
+header {
+    color: #ffffff;
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
+#logo img {
+    max-width: 100%;
+    max-height: 2em;
+}
 
-h1{
-    font-size: clamp(2rem, 6vw, 2.5rem);
-    font-family: "orbitron", sans-serif;
-    font-weight: 500;
+header ul a {
+    text-decoration: none;
+    color: #c0c0c0;
+}
+
+header ul a:hover {
+    color: #ffffff;
+}
+
+/* Botão Hamburguer */
+.menu-btn {
+    position: relative;
+    z-index: 1001;
+    width: 30px;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+.menu-btn__burger {
+    background: white;
+    height: 3px;
+    width: 100%;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-8px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(8px);
+}
+
+/* Estado Ativo */
+.menu-btn.active .menu-btn__burger {
+    background: transparent;
+}
+
+.menu-btn.active .menu-btn__burger::before {
+    transform: rotate(45deg);
+}
+
+.menu-btn.active .menu-btn__burger::after {
+    transform: rotate(-45deg);
+}
+
+/* Nav Mobile */
+.nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(180deg, #1c1c1c, #000);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    width: 100%;
+    padding: 1em 0;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav ul li a {
+    color: #c0c0c0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background: linear-gradient(90deg, #00ffff, #bc13fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: scale(1.05);
+}
+
+.nav.active {
+    display: flex;
+}
+
+/* Tipografia */
+h1 {
+    margin-bottom: 0.5em;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    font-family: "inter", sans-serif;
+    font-weight: 700;
     line-height: 1.2;
+}
+
+h1 span {
+    background: linear-gradient(90deg, #00ffff, #bc13fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h2,
@@ -56,25 +172,41 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "orbitron", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family: "inter", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    text-align: center;
- }   
+    margin: 2em 0;
+}
 
-p,
+p{
+    font-weight: 500;
+    line-height: 1.4;
+
+}
 a,
 li,
 button {
-    font-family: "montserrat", sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.5rem, 2vw, 0.8rem);
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.4;
 }
-
 
 :focus-visible {
     outline: 3px solid #00ffff;
     outline-offset: 2px;
+}
+
+/* Classe Utilitária Neon */
+.borda-neon-arredondada {
+    width: fit-content;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background:
+        radial-gradient(circle at center, #0f0a22 0%, #030014 100%) padding-box,
+        linear-gradient(90deg, #00ffff, #bc13fe) border-box;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+    margin-top: 1em;
 }

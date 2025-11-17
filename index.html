@@ -4,34 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RainaraDev</title>
+  <title>RainaraDev | Portfólio</title>
 
-  <meta name="description"
-    content="Portfólio de RainaraDEV: Desenvolvedora web front-end freelancer. Criação de sites, landing pages, portfólios, lojas virtuais e mais.">
-  <meta name="keywords"
-    content="desenvolvedora web, freelancer, front-end, landing page, portfólio, site responsivo, loja virtual, agrupador de links, HTML, CSS, JavaScript">
-  <meta property="og:title" content="RainaraDEV - Portfólio">
-  <meta property="og:description" content="Desenvolvedora front-end freelancer. Confira meus projetos e serviços.">
-  <meta property="og:image" content="#">
-  <meta property="og:url" content="https://ra1nara.github.io/portfoliorainara/">
-  <meta property="og:type" content="website">
-  <!-- FAVICONS -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon.ico/site.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.ico/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.ico/android-chrome-512x512.png">
+  <meta name="description" content="Portfólio de RainaraDEV: Desenvolvedora web front-end freelancer.">
+  <meta name="keywords" content="desenvolvedora web, freelancer, front-end, html, css, javascript, react">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico/favicon-16x16.png">
+
   <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
+  <header class="container">
     <div id="logo">
-      <img src="./assets/arquivos-rainaradev/logo.png" alt="Logo RainaraDev">
+      <img src="./assets/arquivos-rainaradev/logo.png" alt="RainaraDev Logo">
     </div>
 
     <div class="menu-btn" id="menu-btn">
@@ -43,314 +33,264 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contatos">Contatos</a></li>
-
       </ul>
     </nav>
   </header>
-  <div class="stars"></div>
 
   <main>
-     <img id="astronauta" src="assets/arquivos-rainaradev/Design sem nome-Photoroom.png" alt="">
-    <section id="home" class="container">
+    <div id="canvas-container"></div>
 
+    <section id="home" class="container">
       <div id="content">
-        <p>Olá, visitante <span>&#x1F44B;</span></p>
-        <h1>Meu nome é Rainara</h1>
-        <p>Desenvolvedora front-end freelancer</p>
-        <div class="icones container">
-          <a href="https://www.linkedin.com/in/ra1nara/" target="_blank">
+        <h2>Olá, visitante</h2>
+        <h1><span>Meu nome é </span>
+          <div id="nome">Rainara</div>
+        </h1>
+        <h3 class="borda-neon-arredondada">Desenvolvedora Front-end Freelancer</h3>
+
+        <p id="sobre">Sou estudante de Desenvolvimento Web com um sólido conjunto de habilidades em HTML, CSS,
+          JavaScript, com foco em oferecer experiências completas ao usuário desenvolvendo interfaces atrativas.</p>
+
+        <div class="icones">
+          <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" aria-label="Linkedin">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-          <a href="https://github.com/Ra1nara" target="_blank">
+          <a href="https://github.com/Ra1nara" target="_blank" aria-label="Github">
             <ion-icon name="logo-github"></ion-icon>
           </a>
-          <a href="https://www.instagram.com/rainaradev?igsh=YmRsYXpldWxjM252&utm_source=qr" target="_blank">
+          <a href="https://www.instagram.com/rainaradev" target="_blank" aria-label="Instagram">
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
+        </div>
+      </div>
 
+      <div class="vetor-lateral">
+        <div class="tech-cloud">
+          <div class="tech-icon html"><ion-icon name="logo-html5"></ion-icon></div>
+          <div class="tech-icon css"><ion-icon name="logo-css3"></ion-icon></div>
+          <div class="tech-icon js"><ion-icon name="logo-javascript"></ion-icon></div>
+          <div class="tech-icon figma"><ion-icon name="logo-figma"></ion-icon></div>
+          <div class="tech-icon github"><ion-icon name="logo-github"></ion-icon></div>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="container">
-      <div id="slogan">
-        <h2>Tranformando negócios em experiências digitais.</h2>
+    <section id="servicos" class="container">
+      <h2>Meus Serviços</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="code-slash-outline"></ion-icon></div>
+          <h3>Criação de Sites</h3>
+          <p>Sites institucionais e Landing Pages de alta conversão.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="color-palette-outline"></ion-icon></div>
+          <h3>UI/UX Design</h3>
+          <p>Interfaces modernas focadas na melhor experiência.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+          <h3>Responsividade</h3>
+          <p>Seu site perfeito em qualquer tela: celulares e tablets.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="rocket-outline"></ion-icon></div>
+          <h3>SEO Básico</h3>
+          <p>Otimização para aparecer bem posicionado no Google.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="construct-outline"></ion-icon></div>
+          <h3>Manutenção</h3>
+          <p>Atualizações e correções para manter seu site seguro.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-container"><ion-icon name="globe-outline"></ion-icon></div>
+          <h3>Domínio & Host</h3>
+          <p>Configuração completa para colocar seu site no ar.</p>
+        </div>
       </div>
-
-      <div id="sobreText">
-        <h3>Sobre mim</h3>
-        <p>Sou estudante de Desenvolvimento Web com mais de 2 anos de experiência prática. Como profissional autodidata,
-          estou em
-          constante busca por aprimoramento, aprendendo continuamente novas tecnologias.
-          <br><br> Tenho experiência em projetos utilizando
-          HTML, CSS e JavaScript, com foco em oferecer experiências completas ao usuário desenvolvendo interfaces
-          atrativas,
-          intuitivas e responsivas para os mais diversos dispositivos.
-          <a href="./assets/arquivos-rainaradev/curriculo-rainaradev.pdf" download class="btn-download">📄 Baixar
-          Currículo</a>
-        </p>
-       
-        
-      </div>
-  
     </section>
-    <section id="servicos">
-  <h2>Meus Serviços</h2>
-  <div class="planet-carousel">
-    <div class="planets">
-      <div class="planet">
-        <img src="assets/planetas/terra.png" alt="Terra">
-        <div class="info">SEO Básico</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/marte.png" alt="Marte">
-        <div class="info">Criação de Sites</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/jupiter.png" alt="Júpiter">
-        <div class="info">Design UX</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/saturno.png" alt="Saturno">
-        <div class="info">Portifólio</div>
-      </div>
-    <div class="planet">
-        <img src="assets/planetas/urano.png" alt="Urano">
-        <div class="info">Consultoria</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/netuno.png" alt="Netuno">
-        <div class="info">Manutenção Web</div>
-      </div>
-      
-
-      <!-- Duplicação para o loop infinito -->
-       <div class="planet">
-        <img src="assets/planetas/terra.png" alt="Terra">
-        <div class="info">SEO Básico</div>
-      </div>
-      <div class="planet"> 
-        <img src="assets/planetas/marte.png" alt="Marte">
-        <div class="info">Criação de Sites</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/jupiter.png" alt="Júpiter">
-        <div class="info">Design UX</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/saturno.png" alt="Saturno">
-        <div class="info">Portifólio</div>
-      </div>
-     <div class="planet">
-        <img src="assets/planetas/urano.png" alt="Urano">
-        <div class="info">Consultoria</div>
-      </div>
-      <div class="planet">
-        <img src="assets/planetas/netuno.png" alt="Netuno">
-        <div class="info">Manutenção Web</div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-  
-
 
     <section id="projetos" class="container">
       <h2>Meus Projetos</h2>
       <div id="projetosBox">
-        <div class="box">
-          <div class="carrossel">
-            <button class="prev">&#10094;</button>
-            <div class="carrosselContainer">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(27).png"
-                alt="Seção inicial do projeto barbearia">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(28).png"
-                alt="Seção sobre a barbearia ">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(29).png"
-                alt="Seção de serviços prestados pela barbearia">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(30).png"
-                alt="Seção da galeria de imagens na barbearia">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(31).png"
-                alt="Seção que apresenta a equipe de barbeiros">
-              <img class="carrosselItem" src="./assets/preview-barbearia/Captura-de-Tela(32).png"
-                alt="Seção do formulario de contatos da barbearia">
+    
+        <div class="project-panel">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(27).png" alt="Barbearia Home">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(28).png" alt="Barbearia Sobre">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(29).png" alt="Barbearia Serviços">
             </div>
-            <button class="next">&#10095;</button>
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
           </div>
-          <div class="info">
+          <div class="project-info">
             <h3>Landing Page Barbearia</h3>
-            <p class="infop oculto">Landing page responsiva para barbearia, com design moderno e
-              navegação intuitiva. Ideal para atrair clientes locais. <br>
-              Destaques: Menu hamburger responsivo, uso de animações simples, layout mobile first.</p>
-          </div>
-          <div class="tech-badges">
-            <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
-            <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
-            <span><ion-icon name="logo-javascript"></ion-icon> JavaScript</span>
-          </div>
-          <a class="btn-projetos" href="https://github.com/Ra1nara/landingpage-barber" target="_blank">GITHUB</a>
-          <a class="btn-projetos" href="https://ra1nara.github.io/landingpage-barber/" target="_blank">VER</a>
-        </div>
-        <div class="box">
-          <div class="carrossel">
-            <button class="prev">&#10094;</button>
-            <div class="carrosselContainer">
-              <img class="carrosselItem" src="./assets/preview-links/preview-dark.png"
-                alt="Agrupador de links no modo dark">
-              <img class="carrosselItem" src="./assets/preview-links/preview-light.png"
-                alt="Agrupador de links no modo light">
+            <p>Landing page responsiva para barbearia com design moderno, galeria de cortes e seção de agendamento.</p>
+            <div class="tech-stack">
+              <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
+              <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
+              <span><ion-icon name="logo-javascript"></ion-icon> JS</span>
             </div>
-            <button class="next">&#10095;</button>
+            <div class="project-actions">
+              <a class="action-btn" href="https://github.com/Ra1nara/landingpage-barber" target="_blank">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/landingpage-barber/" target="_blank">VER
+                PROJETO</a>
+            </div>
           </div>
-          <div class="info">
+        </div>
+    
+        <div class="project-panel">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <img src="./assets/preview-links/preview-dark.png" alt="Agrupador Modo Escuro">
+              <img src="./assets/preview-links/preview-light.png" alt="Agrupador Modo Claro">
+            </div>
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
+          </div>
+          <div class="project-info">
             <h3>Agrupador de Links</h3>
-            <p class="infop oculto">Página web que reúne links importantes em um
-              único lugar, para facilitar acesso rápido e organizado. <br>
-              Destaques: Uso de animações simples, layout mobile first.</p>
-          </div>
-          <div class="tech-badges">
-            <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
-            <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
-            <span><ion-icon name="logo-javascript"></ion-icon> JavaScript</span>
-          </div>
-          <a class="btn-projetos" href="https://github.com/Ra1nara/agrupador-de-Links" target="_blank">GITHUB</a>
-          <a class="btn-projetos" href="https://ra1nara.github.io/agrupador-de-Links/" target="_blank">VER</a>
-
-
-        </div>
-        <div class="box">
-          <div class="carrossel">
-            <button class="prev">&#10094;</button>
-            <div class="carrosselContainer">
-              <img class="carrosselItem" src="./assets/preview-stranger-things/preview1.webp"
-                alt="Seção inicial do projeto stranger-things">
-              <img class="carrosselItem" src="./assets/preview-stranger-things/preview2.webp"
-                alt="Seção elenco do projeto stranger-things">
+            <p>Página centralizadora de links (estilo Linktree) com alternância de tema (Dark/Light Mode) e animações
+              suaves.</p>
+            <div class="tech-stack">
+              <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
+              <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
+              <span><ion-icon name="logo-javascript"></ion-icon> JS</span>
             </div>
-            <button class="next">&#10095;</button>
+            <div class="project-actions">
+              <a class="action-btn" href="https://github.com/Ra1nara/agrupador-de-Links" target="_blank">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/agrupador-de-Links/" target="_blank">VER
+                PROJETO</a>
+            </div>
           </div>
-
-          <div class="info">
-            <h3>Stranger Things Fan Page</h3>
-            <p class="infop oculto">Página temática inspirada na série Stranger Things, com layout customizado e
-              uso de fontes e cores característicos. <br>
-              Destaques: Uso de fontes personalizadas, layout responsivo, detalhes visuais que remetem à série.</p>
-          </div>
-          <div class="tech-badges">
-            <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
-            <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
-          </div>
-          <a class="btn-projetos" href="https://github.com/Ra1nara/Stranger-Things" target="_blank">GITHUB</a>
-          <a class="btn-projetos" href="https://ra1nara.github.io/Stranger-Things/" target="_blank">VER</a>
         </div>
+    
+        <div class="project-panel">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <img src="./assets/preview-stranger-things/preview1.webp" alt="Stranger Things Home">
+              <img src="./assets/preview-stranger-things/preview2.webp" alt="Stranger Things Elenco">
+            </div>
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
+          </div>
+          <div class="project-info">
+            <h3>Stranger Things Fan Page</h3>
+            <p>Página temática inspirada na série, com layout invertido, tipografia personalizada e atmosfera imersiva.</p>
+            <div class="tech-stack">
+              <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
+              <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
+            </div>
+            <div class="project-actions">
+              <a class="action-btn" href="https://github.com/Ra1nara/Stranger-Things" target="_blank">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/Stranger-Things/" target="_blank">VER
+                PROJETO</a>
+            </div>
+          </div>
+        </div>
+    
       </div>
     </section>
-
 
     <section id="contatos" class="container">
-      <h2>Entre em contato</h2>
-      <form action="https://formspree.io/f/mldwweqv" class="container" method="POST">
-
-        <div>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nomeF" placeholder="Digite seu nome" required>
+      <div class="contact-wrapper">
+        <div class="contact-header">
+          <h2>Faça um orçamento</h2>
+          <p>Tem uma ideia de outro mundo? Mande uma mensagem e vamos construir algo incrível.</p>
         </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="emailF" placeholder="Digite seu melhor email" required>
-        </div>
-        <div>
-          <label for="whats">WhatsApp: </label>
-          <input type="tel" id="whats" name="whatsF" pattern="\d{2}\d{5}\d{4}" placeholder="11999999999" required>
-        </div>
-        <div>
-          <label for="message">Mensagem:</label>
-          <textarea id="message" name="mensagemF" rows="5" placeholder="Ola, gostaria de fazer um orçamento..."
-            required></textarea>
-        </div>
-        <!-- Anti-spam -->
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-
-        <button type="submit" id="enviar">Enviar</button>
-      </form>
-
-
+    
+        <form action="https://formspree.io/f/mldwweqv" method="POST" class="contact-form">
+    
+          <div class="form-row">
+            <div class="input-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nomeF" placeholder="Seu nome" required>
+            </div>
+    
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="emailF" placeholder="seu@email.com" required>
+            </div>
+          </div>
+    
+          <div class="input-group">
+            <label for="whats">WhatsApp:</label>
+            <input type="tel" id="whats" name="whatsF" placeholder="(00) 00000-0000" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="mensagemF" rows="5" placeholder="Descreva seu projeto..." required></textarea>
+          </div>
+    
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+    
+          <button type="submit" id="enviar">
+            ENVIAR MENSAGEM <ion-icon name="paper-plane-outline"></ion-icon>
+          </button>
+        </form>
+      </div>
     </section>
-
-
-
-
   </main>
 
-  <!-- ====== FOOTER ====== -->
-  <footer class="footer" aria-label="Rodapé">
-    <div class="footer__inner">
-      <!-- Marca -->
-      <div class="footer__brand">
-        <a href="#logo" class="footer__logo" aria-label="Voltar ao topo">RainaraDev</a>
-        <p class="footer__tag">Desenvolvedora Front-end Freelancer</p>
-      </div>
+<footer class="footer" aria-label="Rodapé">
+  <div class="footer__inner">
 
-      <!-- Navegação rápida -->
-      <nav class="footer__nav" aria-label="Navegação no rodapé">
-        <a href="#sobre">Sobre</a>
+    <div class="footer__col brand-col">
+      <a href="#home" class="footer__logo">RainaraDev</a>
+      <p class="footer__tag">Transformando negócios em experiênciasdigitais.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegação</h4>
+      <nav class="footer__nav">
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
-        <a href="#contatos">Contato</a>
-        <a href="/curriculo.pdf" download>Baixar CV</a>
+        <a href="/curriculo.pdf" download class="highlight-link">Baixar CV</a>
       </nav>
+    </div>
 
-      <!-- Contatos -->
+    <div class="footer__col">
+      <h4>Contato</h4>
       <div class="footer__contact">
-        <a href="mailto:rainara.santtoss@gmail.com" rel="noopener">rainara.santtoss@gmail.com</a>
-        <a href="https://wa.me/5573991743300?text=Olá%20Rainara,%20vim%20pelo%20portfólio!" target="_blank"
-          rel="noopener">WhatsApp</a>
-      </div>
-
-      <!-- Redes -->
-      <div class="footer__social" aria-label="Redes sociais">
-        <a href="https://github.com/ra1nara" target="_blank" rel="noopener" aria-label="GitHub">
-          <!-- ícone GitHub -->
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor"
-              d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2c-3.34.72-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.76c-1.1-.75.08-.74.08-.74a2.5 2.5 0 0 1 1.82 1.22 2.54 2.54 0 0 0 3.47 1 2.52 2.52 0 0 1 .76-1.6c-2.66-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.35 11.35 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.44 1.02.48 2.16.12 3.18a4.64 4.64 0 0 1 1.24 3.22c0 4.61-2.82 5.63-5.5 5.93a2.83 2.83 0 0 1 .81 2.2v3.27c0 .33.22.7.83.58A12 12 0 0 0 12 .5Z" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <!-- ícone LinkedIn -->
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor"
-              d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5Zm.02 5.5h-3V21h3V9ZM9 9H6v12h3v-6.2c0-3.36 4-3.63 4 0V21h3v-7.5C16 9.4 12.5 9.6 12 11v-2h-3Z" />
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/rainaradev?igsh=YmRsYXpldWxjM252&utm_source=qr" target="_blank"
-          rel="noopener" aria-label="Instagram">
-          <!-- ícone Instagram -->
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor"
-              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 17.8 2.8 2.8 0 0 0 12 9.2ZM18.5 6a1 1 0 1 1 0 2a1 1 0 0 1 0-2Z" />
-          </svg>
-        </a>
+        <a href="mailto:rainara.santtoss@gmail.com">rainara.santtoss@gmail.com</a>
+        <a href="https://wa.me/5573991743300" target="_blank">WhatsApp: (73) 99174-3300</a>
       </div>
     </div>
 
-    <div class="footer__bottom">
-      <small>© <span id="year"></span> RainaraDev. Todos os direitos reservados.</small>
-      <button class="to-top" aria-label="Voltar ao topo">↑</button>
+    <div class="footer__col">
+      <h4>Redes Sociais</h4>
+      <div class="footer__social">
+        <a href="https://github.com/ra1nara" target="_blank" aria-label="Github">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" aria-label="Linkedin">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/rainaradev" target="_blank" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
 
-
-
+  <div class="footer__bottom">
+    <small>© <span id="year"></span> RainaraDev. Todos os direitos reservados.</small>
+    <button class="to-top" aria-label="Voltar ao topo">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+  </div>
+</footer>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js" defer></script>
-
 </body>
 
 </html>
