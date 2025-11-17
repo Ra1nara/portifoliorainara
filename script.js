@@ -143,3 +143,27 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card, .project-panel').forEach((el) => {
     observer.observe(el);
 });
+
+// Scroll Suave para Links Internos (COM FECHAMENTO DO MENU)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            // Se o menu mobile estiver aberto, fecha ele
+            if(nav.classList.contains('active')){
+                menuBtn.classList.remove('active');
+                nav.classList.remove('active');
+            }
+            
+            // Pequeno delay para permitir que o menu comece a fechar antes de rolar
+            setTimeout(() => {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 300); // 300ms de espera
+        }
+    }); 
+});
