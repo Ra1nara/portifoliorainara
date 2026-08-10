@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RainaraDev | Portfólio</title>
 
-  <meta name="description" content="Portfólio de RainaraDEV: Desenvolvedora web front-end freelancer.">
-  <meta name="keywords" content="desenvolvedora web, freelancer, front-end, html, css, javascript, react">
+  <title>RainaraDev | Sites profissionais para pequenos negócios</title>
+  <meta name="description" content="Criação de sites, landing pages e páginas digitais para pequenos negócios. Sites modernos, responsivos e personalizados pela RainaraDev.">
+  <meta name="keywords" content="criação de sites, landing page, desenvolvedora front-end, site para empresa, site para pequeno negócio, RainaraDev">
+  <meta name="author" content="RainaraDev">
+  <meta name="theme-color" content="#030014">
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico/favicon-32x32.png">
@@ -18,53 +19,75 @@
 </head>
 
 <body>
-
   <header class="container">
-    <div id="logo">
-      <img src="./assets/arquivos-rainaradev/logo.png" alt="RainaraDev Logo">
-    </div>
+    <a id="logo" href="#home" aria-label="RainaraDev - início">
+      <img src="./assets/arquivos-rainaradev/logo.png" alt="RainaraDev">
+    </a>
 
-    <div class="menu-btn" id="menu-btn">
-      <div class="menu-btn__burger"></div>
-    </div>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span class="menu-btn__burger"></span>
+    </button>
 
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Navegação principal">
       <ul>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contatos">Contatos</a></li>
+        <li><a href="#contatos">Orçamento</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div id="canvas-container"></div>
+    <div id="canvas-container" aria-hidden="true"></div>
 
-    <section id="home" class="container">
+    <!-- HERO -->
+    <section id="home" class="container" aria-labelledby="hero-title">
       <div id="content">
-        <h2>Olá, visitante</h2>
-        <h1><span>Meu nome é </span>
-          <div id="nome">Rainara</div>
-        </h1>
+        <span class="eyebrow">RainaraDev · Desenvolvimento web</span>
+        <h2>Seu negócio merece uma presença digital profissional.</h2>
+        <h1 id="hero-title">Sites modernos para <span>atrair clientes</span> e apresentar seu negócio.</h1>
+
         <h3 class="borda-neon-arredondada">Desenvolvedora Front-end Freelancer</h3>
 
-        <p id="sobre">Sou estudante de Desenvolvimento Web com um sólido conjunto de habilidades em HTML, CSS,
-          JavaScript, com foco em oferecer experiências completas ao usuário desenvolvendo interfaces atrativas.</p>
+        <p id="sobre">
+          Crio sites, landing pages e páginas digitais personalizados para pequenos negócios e profissionais que querem ser encontrados, passar mais credibilidade e facilitar o contato com seus clientes.
+        </p>
 
-        <div class="icones">
-          <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" aria-label="Linkedin">
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contatos">
+            Quero um orçamento
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+          <a class="btn btn-secondary" href="#projetos">
+            Ver projetos
+          </a>
+          <a class="btn btn-whatsapp" href="https://wa.me/5573991743300?text=Oi%20Rainara!%20Vi%20seu%20portf%C3%B3lio%20e%20tenho%20interesse%20em%20criar%20um%20site%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-proof" aria-label="Diferenciais">
+          <span><ion-icon name="checkmark-circle-outline"></ion-icon> Layout responsivo</span>
+          <span><ion-icon name="checkmark-circle-outline"></ion-icon> Design personalizado</span>
+          <span><ion-icon name="checkmark-circle-outline"></ion-icon> Atendimento direto</span>
+        </div>
+
+        <div class="icones" aria-label="Redes sociais">
+          <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-          <a href="https://github.com/Ra1nara" target="_blank" aria-label="Github">
+          <a href="https://github.com/Ra1nara" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <ion-icon name="logo-github"></ion-icon>
           </a>
-          <a href="https://www.instagram.com/rainaradev" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/rainaradev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </div>
       </div>
 
-      <div class="vetor-lateral">
+      <div class="vetor-lateral" aria-hidden="true">
         <div class="tech-cloud">
           <div class="tech-icon html"><ion-icon name="logo-html5"></ion-icon></div>
           <div class="tech-icon css"><ion-icon name="logo-css3"></ion-icon></div>
@@ -75,222 +98,321 @@
       </div>
     </section>
 
-    <section id="servicos" class="container">
-      <h2>Meus Serviços</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="code-slash-outline"></ion-icon></div>
-          <h3>Criação de Sites</h3>
-          <p>Sites institucionais e Landing Pages de alta conversão.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="color-palette-outline"></ion-icon></div>
-          <h3>UI/UX Design</h3>
-          <p>Interfaces modernas focadas na melhor experiência.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-          <h3>Responsividade</h3>
-          <p>Seu site perfeito em qualquer tela: celulares e tablets.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="rocket-outline"></ion-icon></div>
-          <h3>SEO Básico</h3>
-          <p>Otimização para aparecer bem posicionado no Google.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="construct-outline"></ion-icon></div>
-          <h3>Manutenção</h3>
-          <p>Atualizações e correções para manter seu site seguro.</p>
-        </div>
-        <div class="service-card">
-          <div class="icon-container"><ion-icon name="globe-outline"></ion-icon></div>
-          <h3>Domínio & Host</h3>
-          <p>Configuração completa para colocar seu site no ar.</p>
-        </div>
+    <!-- SOBRE -->
+    <section id="sobre-mim" class="container" aria-labelledby="sobre-title">
+      <div class="section-heading">
+        <span class="section-kicker">Sobre mim</span>
+        <h2 id="sobre-title">Tecnologia sem complicar para quem precisa vender.</h2>
+        <p>
+          Sou Rainara, desenvolvedora front-end freelancer. Trabalho com HTML, CSS e JavaScript e gosto de transformar ideias em páginas bonitas, funcionais e fáceis de usar.
+        </p>
       </div>
     </section>
 
-    <section id="projetos" class="container">
-      <h2>Meus Projetos</h2>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="container" aria-labelledby="servicos-title">
+      <div class="section-heading">
+        <span class="section-kicker">O que eu faço</span>
+        <h2 id="servicos-title">Soluções digitais para o seu negócio.</h2>
+        <p>Você me conta o que precisa. Eu cuido da parte visual e técnica para colocar sua presença digital no ar.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="desktop-outline"></ion-icon></div>
+          <h3>Site profissional</h3>
+          <p>Site institucional para apresentar sua empresa, serviços, diferenciais e formas de contato.</p>
+          <a class="service-cta" href="#contatos">Quero um site →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="rocket-outline"></ion-icon></div>
+          <h3>Landing Page</h3>
+          <p>Página focada em uma oferta, serviço ou campanha, com estrutura pensada para gerar contatos.</p>
+          <a class="service-cta" href="#contatos">Quero uma landing page →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="restaurant-outline"></ion-icon></div>
+          <h3>Cardápio & página digital</h3>
+          <p>Uma página simples e profissional para restaurantes, bares, salões, lojas e profissionais.</p>
+          <a class="service-cta" href="#contatos">Tenho interesse →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+          <h3>Responsividade</h3>
+          <p>Seu site adaptado para celular, tablet e computador, sem perder qualidade ou usabilidade.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="search-outline"></ion-icon></div>
+          <h3>SEO básico</h3>
+          <p>Estrutura inicial para facilitar a leitura do site pelos mecanismos de busca e melhorar sua presença online.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-container"><ion-icon name="construct-outline"></ion-icon></div>
+          <h3>Manutenção</h3>
+          <p>Atualizações, ajustes e pequenas melhorias depois da publicação do seu site.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo" class="container" aria-labelledby="processo-title">
+      <div class="section-heading">
+        <span class="section-kicker">Como funciona</span>
+        <h2 id="processo-title">Do primeiro contato ao site no ar.</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <span class="process-number">01 · CONVERSA</span>
+          <h3>Você me conta a ideia</h3>
+          <p>Entendo seu negócio, seu público e o que você quer alcançar com o projeto.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">02 · CRIAÇÃO</span>
+          <h3>Eu desenvolvo</h3>
+          <p>Transformo a ideia em uma página com estrutura, design e conteúdo organizados.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">03 · AJUSTES</span>
+          <h3>Você aprova</h3>
+          <p>Alinhamos os detalhes e faço os ajustes necessários antes da publicação.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">04 · PUBLICAÇÃO</span>
+          <h3>Colocamos no ar</h3>
+          <p>Entrego o projeto funcionando e pronto para seus clientes acessarem.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="container" aria-labelledby="projetos-title">
+      <div class="section-heading">
+        <span class="section-kicker">Projetos selecionados</span>
+        <h2 id="projetos-title">Veja na prática o que eu posso criar.</h2>
+        <p>Alguns projetos para mostrar diferentes estilos, necessidades e possibilidades de desenvolvimento.</p>
+      </div>
+
       <div id="projetosBox">
-    
-        <div class="project-panel">
+        <!-- Projeto comercial em destaque -->
+        <article class="project-panel featured">
+          <span class="project-badge">Projeto comercial</span>
           <div class="carousel-container">
             <div class="carousel-track">
-              <img src="./assets/preview-barbearia/Captura-de-Tela(27).png" alt="Barbearia Home">
-              <img src="./assets/preview-barbearia/Captura-de-Tela(28).png" alt="Barbearia Sobre">
-              <img src="./assets/preview-barbearia/Captura-de-Tela(29).png" alt="Barbearia Serviços">
+              <div class="project-visual project-visual--mn" aria-label="Projeto M&N Floricultura">
+                <span>M&N</span>
+                <strong>Floricultura & Presentes</strong>
+                <small>Site comercial · catálogo · WhatsApp</small>
+              </div>
             </div>
-            <button class="carousel-btn prev-btn">&#10094;</button>
-            <button class="carousel-btn next-btn">&#10095;</button>
+          </div>
+          <div class="project-info">
+            <h3>M&N Floricultura & Presentes</h3>
+            <p>Projeto comercial pensado para apresentar produtos, categorias, eventos e facilitar o contato do cliente com a floricultura.</p>
+            <p class="project-result"><strong>Foco:</strong> apresentação profissional + catálogo + contato direto.</p>
+            <div class="tech-stack">
+              <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
+              <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
+              <span><ion-icon name="logo-javascript"></ion-icon> JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a class="action-btn primary" href="https://ra1nara.github.io/MNfloricultura2.0/" target="_blank" rel="noopener noreferrer">VER PROJETO</a>
+              <a class="action-btn" href="#contatos">QUERO ALGO ASSIM</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-panel">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(27).png" alt="Landing Page Barbearia - página inicial" loading="lazy">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(28).png" alt="Landing Page Barbearia - seção sobre" loading="lazy">
+              <img src="./assets/preview-barbearia/Captura-de-Tela(29).png" alt="Landing Page Barbearia - serviços" loading="lazy">
+            </div>
+            <button class="carousel-btn prev-btn" type="button" aria-label="Imagem anterior">&#10094;</button>
+            <button class="carousel-btn next-btn" type="button" aria-label="Próxima imagem">&#10095;</button>
           </div>
           <div class="project-info">
             <h3>Landing Page Barbearia</h3>
-            <p>Landing page responsiva para barbearia com design moderno, galeria de cortes e seção de agendamento.</p>
+            <p>Landing page responsiva para barbearia, com apresentação dos serviços, galeria e chamada para agendamento.</p>
+            <p class="project-result"><strong>Foco:</strong> presença profissional + conversão.</p>
             <div class="tech-stack">
               <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
               <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
               <span><ion-icon name="logo-javascript"></ion-icon> JS</span>
             </div>
             <div class="project-actions">
-              <a class="action-btn" href="https://github.com/Ra1nara/landingpage-barber" target="_blank">GITHUB</a>
-              <a class="action-btn primary" href="https://ra1nara.github.io/landingpage-barber/" target="_blank">VER
-                PROJETO</a>
+              <a class="action-btn" href="https://github.com/Ra1nara/landingpage-barber" target="_blank" rel="noopener noreferrer">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/landingpage-barber/" target="_blank" rel="noopener noreferrer">VER PROJETO</a>
             </div>
           </div>
-        </div>
-    
-        <div class="project-panel">
+        </article>
+
+        <article class="project-panel">
           <div class="carousel-container">
             <div class="carousel-track">
-              <img src="./assets/preview-links/preview-dark.png" alt="Agrupador Modo Escuro">
-              <img src="./assets/preview-links/preview-light.png" alt="Agrupador Modo Claro">
+              <img src="./assets/preview-links/preview-dark.png" alt="Agrupador de Links - modo escuro" loading="lazy">
+              <img src="./assets/preview-links/preview-light.png" alt="Agrupador de Links - modo claro" loading="lazy">
             </div>
-            <button class="carousel-btn prev-btn">&#10094;</button>
-            <button class="carousel-btn next-btn">&#10095;</button>
+            <button class="carousel-btn prev-btn" type="button" aria-label="Imagem anterior">&#10094;</button>
+            <button class="carousel-btn next-btn" type="button" aria-label="Próxima imagem">&#10095;</button>
           </div>
           <div class="project-info">
             <h3>Agrupador de Links</h3>
-            <p>Página centralizadora de links (estilo Linktree) com alternância de tema (Dark/Light Mode) e animações
-              suaves.</p>
+            <p>Página centralizadora de links com alternância de tema e uma interface simples para reunir vários canais.</p>
+            <p class="project-result"><strong>Foco:</strong> organização + experiência mobile.</p>
             <div class="tech-stack">
               <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
               <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
               <span><ion-icon name="logo-javascript"></ion-icon> JS</span>
             </div>
             <div class="project-actions">
-              <a class="action-btn" href="https://github.com/Ra1nara/agrupador-de-Links" target="_blank">GITHUB</a>
-              <a class="action-btn primary" href="https://ra1nara.github.io/agrupador-de-Links/" target="_blank">VER
-                PROJETO</a>
+              <a class="action-btn" href="https://github.com/Ra1nara/agrupador-de-Links" target="_blank" rel="noopener noreferrer">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/agrupador-de-Links/" target="_blank" rel="noopener noreferrer">VER PROJETO</a>
             </div>
           </div>
-        </div>
-    
-        <div class="project-panel">
+        </article>
+
+        <article class="project-panel">
           <div class="carousel-container">
             <div class="carousel-track">
-              <img src="./assets/preview-stranger-things/preview1.webp" alt="Stranger Things Home">
-              <img src="./assets/preview-stranger-things/preview2.webp" alt="Stranger Things Elenco">
+              <img src="./assets/preview-stranger-things/preview1.webp" alt="Stranger Things Fan Page - página inicial" loading="lazy">
+              <img src="./assets/preview-stranger-things/preview2.webp" alt="Stranger Things Fan Page - elenco" loading="lazy">
             </div>
-            <button class="carousel-btn prev-btn">&#10094;</button>
-            <button class="carousel-btn next-btn">&#10095;</button>
+            <button class="carousel-btn prev-btn" type="button" aria-label="Imagem anterior">&#10094;</button>
+            <button class="carousel-btn next-btn" type="button" aria-label="Próxima imagem">&#10095;</button>
           </div>
           <div class="project-info">
             <h3>Stranger Things Fan Page</h3>
-            <p>Página temática inspirada na série, com layout invertido, tipografia personalizada e atmosfera imersiva.</p>
+            <p>Página temática criada para explorar identidade visual, tipografia, composição e atmosfera imersiva.</p>
             <div class="tech-stack">
               <span><ion-icon name="logo-html5"></ion-icon> HTML5</span>
               <span><ion-icon name="logo-css3"></ion-icon> CSS3</span>
             </div>
             <div class="project-actions">
-              <a class="action-btn" href="https://github.com/Ra1nara/Stranger-Things" target="_blank">GITHUB</a>
-              <a class="action-btn primary" href="https://ra1nara.github.io/Stranger-Things/" target="_blank">VER
-                PROJETO</a>
+              <a class="action-btn" href="https://github.com/Ra1nara/Stranger-Things" target="_blank" rel="noopener noreferrer">GITHUB</a>
+              <a class="action-btn primary" href="https://ra1nara.github.io/Stranger-Things/" target="_blank" rel="noopener noreferrer">VER PROJETO</a>
             </div>
           </div>
-        </div>
-    
+        </article>
       </div>
     </section>
 
-    <section id="contatos" class="container">
+    <!-- CTA FINAL -->
+    <section id="cta-final" class="container" aria-labelledby="cta-title">
+      <div class="cta-panel">
+        <div>
+          <span class="section-kicker">Vamos conversar?</span>
+          <h2 id="cta-title">Pronto para colocar seu negócio na internet?</h2>
+          <p>Me conte o que você precisa e eu te explico a melhor solução para o seu projeto.</p>
+        </div>
+        <a class="btn btn-primary" href="#contatos">
+          Solicitar orçamento
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contatos" class="container" aria-labelledby="contato-title">
       <div class="contact-wrapper">
         <div class="contact-header">
-          <h2>Faça um orçamento</h2>
-          <p>Tem uma ideia de outro mundo? Mande uma mensagem e vamos construir algo incrível.</p>
+          <span class="section-kicker">Orçamento</span>
+          <h2 id="contato-title">Vamos tirar sua ideia do papel?</h2>
+          <p>Preencha o formulário ou fale comigo pelo WhatsApp. Quanto mais detalhes você enviar, melhor consigo entender o projeto.</p>
         </div>
-    
+
         <form action="https://formspree.io/f/mldwweqv" method="POST" class="contact-form">
-    
           <div class="form-row">
             <div class="input-group">
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nomeF" placeholder="Seu nome" required>
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
             </div>
-    
+
             <div class="input-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="emailF" placeholder="seu@email.com" required>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
             </div>
           </div>
-    
+
           <div class="input-group">
-            <label for="whats">WhatsApp:</label>
-            <input type="tel" id="whats" name="whatsF" placeholder="(00) 00000-0000" required>
+            <label for="whats">WhatsApp</label>
+            <input type="tel" id="whats" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel" required>
           </div>
-    
+
           <div class="input-group">
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="mensagemF" rows="5" placeholder="Descreva seu projeto..." required></textarea>
+            <label for="message">O que você precisa?</label>
+            <textarea id="message" name="mensagem" rows="5" placeholder="Ex.: preciso de um site para minha loja, com catálogo e botão para WhatsApp..." required></textarea>
           </div>
-    
-          <input type="text" name="_honey" style="display:none">
+
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-    
+
           <button type="submit" id="enviar">
-            ENVIAR MENSAGEM <ion-icon name="paper-plane-outline"></ion-icon>
+            ENVIAR MENSAGEM
+            <ion-icon name="paper-plane-outline"></ion-icon>
           </button>
         </form>
       </div>
     </section>
   </main>
 
-<footer class="footer" aria-label="Rodapé">
-  <div class="footer__inner">
+  <footer class="footer" aria-label="Rodapé">
+    <div class="footer__inner">
+      <div class="footer__col brand-col">
+        <a href="#home" class="footer__logo">RainaraDev</a>
+        <p class="footer__tag">Sites profissionais para transformar presença digital em oportunidade.</p>
+      </div>
 
-    <div class="footer__col brand-col">
-      <a href="#home" class="footer__logo">RainaraDev</a>
-      <p class="footer__tag">Transformando negócios em experiênciasdigitais.</p>
-    </div>
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <nav class="footer__nav" aria-label="Links do rodapé">
+          <a href="#sobre-mim">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contatos">Orçamento</a>
+          <a href="/curriculo.pdf" download class="highlight-link">Baixar CV</a>
+        </nav>
+      </div>
 
-    <div class="footer__col">
-      <h4>Navegação</h4>
-      <nav class="footer__nav">
-        <a href="#sobre">Sobre Mim</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#projetos">Projetos</a>
-        <a href="/curriculo.pdf" download class="highlight-link">Baixar CV</a>
-      </nav>
-    </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <div class="footer__contact">
+          <a href="mailto:rainara.santtoss@gmail.com">rainara.santtoss@gmail.com</a>
+          <a href="https://wa.me/5573991743300" target="_blank" rel="noopener noreferrer">WhatsApp: (73) 99174-3300</a>
+        </div>
+      </div>
 
-    <div class="footer__col">
-      <h4>Contato</h4>
-      <div class="footer__contact">
-        <a href="mailto:rainara.santtoss@gmail.com">rainara.santtoss@gmail.com</a>
-        <a href="https://wa.me/5573991743300" target="_blank">WhatsApp: (73) 99174-3300</a>
+      <div class="footer__col">
+        <h4>Redes sociais</h4>
+        <div class="footer__social">
+          <a href="https://github.com/ra1nara" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://www.instagram.com/rainaradev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
       </div>
     </div>
 
-    <div class="footer__col">
-      <h4>Redes Sociais</h4>
-      <div class="footer__social">
-        <a href="https://github.com/ra1nara" target="_blank" aria-label="Github">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a href="https://www.linkedin.com/in/ra1nara/" target="_blank" aria-label="Linkedin">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <a href="https://www.instagram.com/rainaradev" target="_blank" aria-label="Instagram">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-      </div>
+    <div class="footer__bottom">
+      <small>© <span id="year"></span> RainaraDev. Todos os direitos reservados.</small>
+      <button class="to-top" type="button" aria-label="Voltar ao topo">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </button>
     </div>
-  </div>
-
-  <div class="footer__bottom">
-    <small>© <span id="year"></span> RainaraDev. Todos os direitos reservados.</small>
-    <button class="to-top" aria-label="Voltar ao topo">
-      <ion-icon name="arrow-up-outline"></ion-icon>
-    </button>
-  </div>
-</footer>
+  </footer>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js" defer></script>
 </body>
-
 </html>
