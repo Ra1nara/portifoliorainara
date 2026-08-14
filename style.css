@@ -290,9 +290,9 @@
 }
 
 #projetosBox {
-  display: grid;
-  grid-template-columns: repeat(3, minmax( 0, 1fr));
-  gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 2rem;
 }
 
 .project-panel {
@@ -320,7 +320,6 @@
 }
 
 .project-panel.featured {
-  grid-column: span 2;
   border-color: rgba(188,19,254,.25);
 }
 
@@ -342,27 +341,24 @@
 }
 
 .carousel-container {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-  background: #05050a;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: transparent;
 }
 
-.project-panel.featured .carousel-container {
-  height: 250px;
-}
+
 
 .carousel-track {
-  display: flex;
-  height: 100%;
-  transition: transform .45s ease;
+    display: flex;
+    height: 100%;
+    transition: transform .45s ease;
 }
 
 .carousel-track img {
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel-btn {
